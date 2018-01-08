@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Fjalla One';
+}
+
+h3,
+h2 {
+    font-family: 'Fjalla One';
+}
+
+.eksempler p,
+.eksempler1 p,
+#flowchart p,
+#sprite p,
+#eksempler1 p,
+    {
+    font-size: 12px;
+    color: gray;
+}
+
+/*--------------BRUGER MENU START---------------*/
+
+a {
+    text-decoration: none;
+    color: #668E7C;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #E9FFF5;
+}
+
+#menuToggle {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 1;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #000;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    box-shadow: 8px 0px 20px 0px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    width: 300px;
+    height: inherit;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #B2DBC8;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 5px 0;
+    font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*--------------BRUGER MENU SLUT---------------*/
+
+#stilartsite header,
+#portfolio header,
+#animation header,
+#privatsnak header,
+#pilotprojekt header,
+#dox header,
+#redesign header,
+#kapp header,
+#republikken header,
+#tema1 header,
+#tema2 header,
+#tema3 header,
+#tema4 header {
+    flex-grow: 1;
+    flex-basis: 250px;
+    background-color: #2D5438;
+    opacity: 0.3;
+    text-align: center;
+}
+
+header p,
+header h1,
+Header h2,
+Header h3 {
+    color: white;
+}
+
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px;
+}
+
+#about h1 {
+    font-size: 50px;
+    font-family: 'Fjalla One';
+    margin-bottom: 40px;
+}
+
+
+#about img {
+    display: flex;
+    flex-wrap: wrap;
+    height: 33vw;
+    width: 25vw;
+
+
+}
+
+.img_portfolio img {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    height: 20vw;
+    width: 30vw;
+    border-radius: 5px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+}
+
+.img_portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 50px;
+    align-self: flex-start;
+
+
+}
+
+#forside .sectionwrapper {
+    height: auto;
+    width: 65vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+}
+
+
+
+#portfolio .sectionwrapper {
+    height: auto;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+}
+
+#grund_html,
+#pro,
+#sex,
+#grund_video_pilot,
+#grund_animation,
+#grund_ux,
+#grund_video {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px;
+}
+
+#stilartsite .sectionwrapper,
+#animation .sectionwrapper,
+#privatsnak .sectionwrapper,
+#pilotprojekt .sectionwrapper,
+#dox .sectionwrapper,
+#redesign .sectionwrapper,
+#kapp.sectionwrapper,
+#republikken .sectionwrapper,
+#kapp .sectionwrapper {
+    height: auto;
+    width: 55vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4.1vw;
+
+}
+
+
+
+
+#tema1 .sectionwrapper {
+    height: auto;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+}
+
+.eksempler img {
+    flex-grow: 1;
+    flex-basis: 50px;
+    height: 15vw;
+    width: 25vw;
+    margin-right: 20px;
+
+}
+
+#stilartsite .dokument_tekst {
+    margin-bottom: 4.1vw;
+}
+
+
+
+#tema2 .sectionwrapper {
+    height: auto;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+}
+
+#pilot img {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#everyday img {
+    display: flex;
+    flex-wrap: wrap;
+    height: 10vw;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+#stiletyle img {
+    display: flex;
+    flex-wrap: wrap;
+    height: 30vw;
+}
+
+
+
+#tema3 .sectionwrapper {
+    height: auto;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+}
+
+#flowchart img {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    height: 65vw
+}
+
+
+#sprite img {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 50px;
+    height: 20vw;
+    width: 30vw;
+
+
+}
+
+
+
+#trello img,
+#spil img {
+    flex-grow: 1;
+    flex-basis: 50px;
+    height: 30vw;
+    width: 45vw;
+    margin-top: 30px;
+}
+
+
+#tema4 .sectionwrapper {
+    height: auto;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+}
+
+#kea_app img {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50px;
+    height: 20vw;
+    margin-left: 70px;
+    margin-bottom: 20px;
+
+}
+
+#kea_app .tekst,
+    {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 400px;
+    height: 20vw;
+
+}
+
+#u_r_social img {
+    display: flex;
+    flex-wrap: wrap;
+    height: 15vw;
+    margin: 20px;
+
+}
+
+#u_r_social .urs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 40px;
+    align-self: center;
+}
+
+#u_r_social .urs_tekst {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 490px;
+    align-self: center;
+}
+
+
+
+
+.om_tekst {
+    flex-grow: 1;
+    flex-basis: 60px;
+    margin-left: 20px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+#portfolio .tekst {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 60px;
+    margin-left: 20px;
+    opacity: 0.4;
+
+}
+
+#tema1 .tekst {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 60px;
+    margin-left: 20px;
+    opacity: 0.4;
+
+}
+
+#tema2 .tekst {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 60px;
+    margin-left: 20px;
+    opacity: 0.4;
+
+}
+
+#tema3 .tekst {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 60px;
+    margin-left: 20px;
+    opacity: 0.4;
+
+}
+
+#tema4 .tekst {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 60px;
+    margin-left: 20px;
+    opacity: 0.4;
+
+}
+
+
+#splash {
+    width: 100vw;
+    height: 167vw;
+    background-image: url(img/Splash_mobil_portrait-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 376px) and (orientation: landscape) {
+    body {}
+    #splash {
+        height: 60vw;
+        background-image: url(img/splash_mobil_landscape-01.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    body {}
+    #splash {
+        height: 133vw;
+        background-image: url(img/Splash_tablet_portrait-01.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1025px) and (orientation: landscape) {
+    body {}
+    #splash {
+        height: 75vw;
+        background-image: url(img/Splash_tablet%20landscape.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    body {}
+    #splash {
+        height: 56vw;
+        background-image: url(img/splash_desktop2-01.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 5121px) {
+    body {}
+    #splash {
+        height: 56vw;
+        background-image: url(img/splash_desktop_retina.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+footer {
+    flex-grow: 1;
+    flex-basis: 250px;
+    background-color: #2D5438;
+    opacity: 0.3;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 20px;
+
+}
+
+footer p,
+footer h3 {
+    color: white;
+}
+
+
+.ikon_img {
+    flex-grow: 1;
+    flex-basis: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    height: 3vw;
+    width: 3vw;
+}
